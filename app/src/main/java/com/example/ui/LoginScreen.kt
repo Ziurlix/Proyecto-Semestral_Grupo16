@@ -17,9 +17,17 @@ import com.example.viewmodel.LoginViewModel
 
 @Preview
 @Composable
-fun LoginScreen (
-    viewModel: LoginViewModel = remember { LoginViewModel() }
+fun LoginScreen(
+    viewModel: LoginViewModel = remember { LoginViewModel() },
+    onLoginSuccess: () -> Unit = {} // <-- Callback para la navegación
 ) {
+    // Si loginExitoso pasa a true, dispara la navegación automáticamente
+    LaunchedEffect(viewModel.loginSuccess) {
+        if (viewModel.loginSuccess) {
+            onLoginSuccess()
+        }
+    }
+
     // Guarda lo escrito en los campos
     var correo by remember { mutableStateOf("") }
     var clave by remember { mutableStateOf("") }

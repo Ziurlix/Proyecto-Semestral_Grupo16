@@ -44,4 +44,10 @@ class LoginViewModel : ViewModel() {
             }
         }
     }
+
+    fun cerrarSesion() {
+        loginSuccess = false
+        msgError = null
+        intentosFallidos = 0
+    }
 }
