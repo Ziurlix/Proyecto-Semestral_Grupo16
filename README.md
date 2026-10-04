@@ -13,7 +13,7 @@ Se avanzó en el módulo base de autenticación con los siguientes cambios:
 </details>
 
 <details>
-<summary><b>▼ v0.2.0-alpha </b></summary>
+<summary><b> v0.2.0-alpha </b></summary>
 
 Se integró el flujo de navegación y la vista principal de operaciones con los siguientes cambios:
 
